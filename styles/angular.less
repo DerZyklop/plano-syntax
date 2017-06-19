@@ -1,0 +1,147 @@
+// // For language entity colors
+// @syntax-color-variable:   @hue-5;
+// @syntax-color-constant:   @hue-6;
+// @syntax-color-property:   @syntax-fg;
+// @syntax-color-value:      @syntax-fg;
+// @syntax-color-function:   @hue-2;
+// @syntax-color-method:     @hue-2;
+// @syntax-color-class:      @hue-6-2;
+// @syntax-color-keyword:    @hue-3;
+// @syntax-color-tag:        @hue-5;
+// @syntax-color-attribute:  @hue-6;
+// @syntax-color-import:     @hue-3;
+// @syntax-color-snippet:    @hue-4;
+
+
+//@111111: #4dd0e1;
+@111111: #4dd0e1;
+@222222: @syntax-color-constant;
+@333333: @syntax-color-property;
+@444444: @syntax-color-value;
+@555555: @syntax-color-function;
+@666666: darken(#4dd0e1, 15%);
+@777777: @syntax-color-keyword;
+
+.syntax--html {
+
+  // <fa [name]="ffo" ... the [name] part
+  .syntax--entity.syntax--other.syntax--attribute-name.syntax--ng {
+    color: darken(@666666, 10%) !important;
+  }
+
+  .syntax--punctuation.syntax--separator.syntax--key-value.syntax--ng {
+    color: darken(@syntax-color-attribute, 5%) !important;
+
+  }
+
+  .syntax--meta.syntax--attribute-with-value.syntax--ng {
+    color: #0f0 !important; // ???
+  }
+
+  // doublequotes
+  .syntax--punctuation.syntax--definition.syntax--string.syntax--begin.syntax--ng,
+  .syntax--punctuation.syntax--definition.syntax--string.syntax--end.syntax--ng {
+    color: @hue-6 !important;
+  }
+
+  .syntax--meta.syntax--toc-list.syntax--ng {
+    color: @hue-6-2 !important;
+  }
+
+  .syntax--string.syntax--interpolation.syntax--ng {
+    color: @333333 !important;
+    color: @hue-3 !important;
+    color: #0f0 !important; // ???
+  }
+
+  .syntax--punctuation.syntax--definition.syntax--interpolation.syntax--begin.syntax--ng,
+  .syntax--punctuation.syntax--definition.syntax--interpolation.syntax--end.syntax--ng {
+    color: @666666 !important;
+    color: @hue-5-2 !important;
+  }
+
+  .syntax--meta.syntax--definition.syntax--interpolation.syntax--ng {
+    color: @hue-5 !important;
+  }
+
+  .syntax--string.syntax--interpolation.syntax--pipe.syntax--ng {
+    color: @hue-6 !important;
+    color: #0f0 !important; // ???
+  }
+
+  .syntax--meta.syntax--ngfor-attribute.syntax--ng {
+    color: darken(@666666, 10%) !important;
+  }
+
+  .syntax--punctuation.syntax--definition.syntax--tag.syntax--ng {
+    /*BUG: see line 81*/
+    color: darken(@666666, 5%) !important;
+    color: #0f0 !important; // ???
+  }
+
+  .syntax--punctuation.syntax--definition.syntax--tag.syntax--begin.syntax--ng,
+  .syntax--punctuation.syntax--definition.syntax--tag.syntax--end.syntax--ng {
+    /*BUG: Broken! It colors the whole tag */
+    color: @666666 !important;
+  }
+
+  .syntax--entity.syntax--name.syntax--tag.syntax--ng {
+    color: darken(@111111,15%) !important;
+    color: #0f0 !important; // ???
+  }
+
+  .syntax--entity.syntax--name.syntax--tag.syntax--other.syntax--ng {
+    color: darken(@111111,15%) !important;
+    color: @hue-3 !important;
+    color: #0f0 !important; // ???
+  }
+
+  .syntax--meta.syntax--tag.syntax--any.syntax--ng {
+    color: darken(@111111,15%) !important;
+    color: @hue-3 !important;
+    color: #0f0 !important; // ???
+  }
+
+  .syntax--meta.syntax--tag.syntax--other.syntax--ng {
+    color: @mono-1 !important; // ???
+  }
+
+  // Interpolation Syntax
+  .syntax--punctuation.syntax--definition.syntax--js.syntax--string.syntax--begin.syntax--ng.syntax--html,
+  .syntax--punctuation.syntax--definition.syntax--js.syntax--string.syntax--end.syntax--ng.syntax--html {
+    color: @444444 !important;
+    color: @hue-3 !important;
+    color: #0f0 !important; // ???
+    color: @mono-3 !important; // ???
+    color: @hue-6 !important;
+  }
+
+  .syntax--string.syntax--operator.syntax--ng {
+    color: @mono-1 !important; // ????
+  }
+
+  .syntax--string.syntax--bracket.syntax--ng {
+    color: lighten(@hue-5, 5%) !important; // ???
+  }
+
+  .syntax--string.syntax--js.syntax--bool.syntax--ng {
+    color: @222222 !important;
+    color: @hue-3 !important;
+    color: #0f0 !important; // ???
+  }
+
+  .syntax--punctuation.syntax--definition.syntax--function.syntax--begin.syntax--ng,
+  .syntax--punctuation.syntax--definition.syntax--function.syntax--end.syntax--ng {
+    color: @666666 !important;
+    color: @hue-3 !important;
+    color: #0f0 !important; // ???
+    color: darken(@hue-5, 5%) !important;
+  }
+
+  .syntax--meta.syntax--definition.syntax--function.syntax--ng {
+    color: @333333 !important;
+    color: @hue-3 !important;
+    color: @hue-5 !important;
+  }
+
+}
