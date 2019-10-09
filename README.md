@@ -11,3 +11,7 @@ The theme is inspired by [firewatch-syntax](https://atom.io/themes/firewatch-syn
 ```
 apm install plano-syntax
 ```
+If this gives you a `Request for package information failed: Not Found` for some reason, then try this:
+```
+apm install plano-syntax
+```
