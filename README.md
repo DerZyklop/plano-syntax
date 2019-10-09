@@ -13,5 +13,5 @@ apm install plano-syntax
 ```
 If this gives you a `Request for package information failed: Not Found` for some reason, then try this:
 ```
-apm install plano-syntax
+apm install DerZyklop/plano-syntax
 ```
